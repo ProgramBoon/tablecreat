@@ -16,7 +16,7 @@ class Database:
         #     pas = p.parsingFile("password", True)
         #     hos = p.parsingFile("host", True)
             try:
-                db = pgsql.Connection(database="autsave", user="postgres", password="xthyjskm2000")
+                db = pgsql.Connection(database="autsave", user="postgres", password="")
                 db("INSERT INTO public.info(hostname, filepath, date, filesize, server) VALUES("+data[0]+","+data[1]+","+data[2]+","+data[3]+","+data[4]+")")
                 db.close()
 
@@ -33,7 +33,7 @@ class Database:
         #     pas = p.parsingFile("password", True)
         #     hos = p.parsingFile("host", True)
             try:
-                db = pgsql.Connection(database="autsave", user="postgres", password="xthyjskm2000")
+                db = pgsql.Connection(database="autsave", user="postgres", password="")
                 db("INSERT INTO public.errorlog(server, content) VALUES("+data[0]+","+data[1]+")")
                 db.close()
 
